@@ -1,42 +1,71 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+html {
+  background-color: var(--background-main);
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+  padding: 8px;
+  font-weight: normal;
+  text-align: center;
+  background-color: var(--background-main);
+  color: var(--nav-text);
+}
+
+h2{
+  font-size: 18px;
+  color: var(--text-primary);
+}
+
+.center{
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  vertical-align: center;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.player{
+  margin: 10px;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--text-primary);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.score {
+  padding: 1px;
+  font-size:small;
+  font-weight: bold;
+  background-color: var(--nav-background);
 }
 
-.card {
-  padding: 2em;
+.action {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  color: var(--button-blue);
 }
 
-.read-the-docs {
-  color: #888;
+.round-btn{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  margin: 2px;
+  cursor: pointer;
+  background-color: var(--button-blue);
+  color: var(--button-blue-text);
+  text-align: center;
+}
+
+.round-btn:hover{
+  background-color: var(--button-blue-hover);
 }
