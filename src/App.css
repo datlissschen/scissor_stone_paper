@@ -3,17 +3,17 @@ html {
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 4rem;
   margin: 0;
-  padding: 8px;
-  font-weight: normal;
+  padding: 1rem;
+  font-weight: bold;
   text-align: center;
   background-color: var(--background-main);
   color: var(--nav-text);
 }
 
 h2{
-  font-size: 18px;
+  font-size: 1.125rem;
   color: var(--text-primary);
 }
 
@@ -30,16 +30,16 @@ h2{
 }
 
 .player{
-  margin: 10px;
-  width: 120px;
-  height: 120px;
+  margin: 0.625rem;
+  width: 7.5rem;
+  height: 7.5rem;
   display: flex;
   flex-direction: column;
   background-color: var(--text-primary);
 }
 
 .score {
-  padding: 1px;
+  padding: 0.063rem;
   font-size:small;
   font-weight: bold;
   background-color: var(--nav-background);
@@ -51,21 +51,21 @@ h2{
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  color: var(--button-blue);
+  color: var(--button-green);
 }
 
 .round-btn{
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
   border-radius: 50%;
   border: none;
-  margin: 2px;
+  margin: 0.065rem;
   cursor: pointer;
-  background-color: var(--button-blue);
+  background-color: var(--button-green);
   color: var(--button-blue-text);
   text-align: center;
 }
 
 .round-btn:hover{
-  background-color: var(--button-blue-hover);
+  background-color: var(--button-green-hover);
 }
