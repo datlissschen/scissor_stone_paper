@@ -1,0 +1,46 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    background-color: var(--input-background);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 1rem 2rem 1rem 1rem;
+
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.designbutton {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--button-green);
+    color: var(--text-hover);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.smallbutton{
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--text-hover);
+    color: var(--text-hover);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

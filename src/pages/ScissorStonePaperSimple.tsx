@@ -1,4 +1,4 @@
-import "./ScissorStonePaper.css";
+import "../modules/ScissorStonePaper.css";
 import { useState } from "react";
 
 //import components
