@@ -6,9 +6,11 @@ export function Navbar() {
     return (
         <header className="navbar">
             <nav className="navbar-nav">
+                {/*small buttons just for optics*/}
                 <button className="designbutton"></button>
                 <button className="smallbutton"></button>
                 <button className="designbutton"></button>
+                <button className="smallbutton"></button>
                 <button>
                     <Link to="/">
                         <ActionIcon action="home" size={15} />

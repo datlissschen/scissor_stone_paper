@@ -20,27 +20,30 @@
     max-width: 1200px;
     margin: 0 auto;
 }
-
 .designbutton {
-    width: 2rem;
-    height: 2rem;
+    width: 1rem;           /* ≈ 16px */
+    height: 1rem;
     border-radius: 50%;
     border: none;
     background-color: var(--button-green);
-    color: var(--text-hover);
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    padding: 0;
 }
 
-.smallbutton{
-    width: 0.5rem;
-    height: 0.5rem;
+.smallbutton {
+    width: 0.6rem;          /* ≈ 10px */
+    height: 0.6rem;
     border-radius: 50%;
     border: none;
     background-color: var(--text-hover);
-    color: var(--text-hover);
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    padding: 0;
 }
