@@ -1,11 +1,11 @@
 import Modal from "react-modal";
-import "../modules/Modal.css";
+import "../modules/ModalGame.css";
 import { useEffect, useState } from "react";
 import {BsBackspaceReverse} from "react-icons/bs";
 
 Modal.setAppElement("#root");
 
-export default function Modal() {
+export default function ModalGame() {
     const [modalIsOpen, setModalIsOpen] = useState(false);
 
     useEffect(() => {
