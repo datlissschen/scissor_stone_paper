@@ -11,17 +11,17 @@ export function Navbar() {
                 <button className="smallbutton"></button>
                 <button className="designbutton"></button>
                 <button className="smallbutton"></button>
-                <button>
+                <button title="home">
                     <Link to="/">
                         <ActionIcon action="home" size={15} />
                     </Link>
                 </button>
-                <button>
+                <button title="SchereSteinPapierLizard und Spark Extension">
                     <Link to="/SSPComplex">
                         SchereSteinPapierKomplex
                     </Link>
                 </button>
-                <button>
+                <button title = "SchereSteinPapier">
                     <Link to="/game">
                         <ActionIcon action="game" size={15} />
                     </Link>
