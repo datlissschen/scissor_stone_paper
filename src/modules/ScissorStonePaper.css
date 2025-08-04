@@ -1,15 +1,13 @@
-html {
-  background-color: var(--background-main);
-}
-
-h1 {
-  font-size: 4rem;
-  margin: 0;
-  padding: 1rem;
-  font-weight: bold;
-  text-align: center;
-  background-color: var(--background-main);
-  color: var(--nav-text);
+.general {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
+  padding: 2rem;
+  width: 100%;
+  max-width: 600px; /* maximal width on bigger screens*/
+  box-sizing: border-box;
 }
 
 h2{

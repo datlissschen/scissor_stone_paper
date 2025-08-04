@@ -1,19 +1,28 @@
 import {Link} from "react-router-dom";
+import "../modules/Game.css"
 
 export default function Game(){
     return(
-        <div>
+        <div className = "general">
             <h1>Wähle deine Spieloptionen</h1>
-            <button title = "SchereSteinPapier">
-                <Link to="/schereSteinPapier">
-                    SchereSteinPaper
-                </Link>
-            </button>
-            <button title="SchereSteinPapierLizard und Spark Extension">
-                <Link to="/SSPComplex">
-                    SchereSteinPapierKomplex
-                </Link>
-            </button>
+            <ul className = "optionlist">
+                <li>
+                    <button className={"gamebutton"} title= "SchereSteinPapier">
+                        <Link to="/SSP">
+                            SchereSteinPaper
+                        </Link>
+                    </button>
+                </li>
+                <li>
+                    <button className={"gamebutton"} title="SchereSteinPapierLizard und Spark Extension">
+                        <Link to="/SSPComplex">
+                            SchereSteinPapierKomplex
+                        </Link>
+                    </button>
+                </li>
+
+            </ul>
+
         </div>
     )
 }

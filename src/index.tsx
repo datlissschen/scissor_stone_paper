@@ -17,8 +17,8 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
             <Navbar />
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path = "/SSPComplex" element={<ScissorStonePaperSpock />} />
                 <Route path="/game" element={<Game/>} />
+                <Route path = "/SSPComplex" element={<ScissorStonePaperSpock />} />
                 <Route path="/SSP" element={<ScissorStonePaperSimple />} />
             </Routes>
         </BrowserRouter>
