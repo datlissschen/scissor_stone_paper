@@ -32,6 +32,11 @@
     cursor: pointer;
     transition: border-color 0.25s;
 }
+
+.button:hover{
+    transform: scale(1.03);
+}
+
 .designbutton {
     width: 1rem;
     height: 1rem;

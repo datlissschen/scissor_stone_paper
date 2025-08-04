@@ -72,6 +72,7 @@ button {
 }
 button:hover {
   border-color: #31CB00;
+  transform: scale(1.03);
 }
 button:focus,
 button:focus-visible {
