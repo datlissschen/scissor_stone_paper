@@ -8,9 +8,10 @@ import { ActionButton } from "../components/ActionButton";
 import { ShowWinner } from "../components/ShowWinner.tsx";
 import { randomAction, calculateWinner } from "../utils/logic.ts";
 import type {Action} from "../types.ts";
+import {ActionIcon} from "../components/ActionIcon.tsx";
 
 // main
-export default function ScissorStonePaperSpark() {
+export default function ScissorStonePaperSpock() {
     const [playerAction, setPlayerAction] = useState<Action>("rock");
     const [computerAction, setComputerAction] = useState<Action>("rock");
 
@@ -46,6 +47,12 @@ export default function ScissorStonePaperSpark() {
                     {actions.map((action) => (
                         <ActionButton key={action} action={action} onActionSelected={onActionSelected} />
                     ))}
+                    <button className="round-btn" onClick={() => onActionSelected("lizard")}>
+                        <ActionIcon action={"lizard"} size={20} />
+                    </button>
+                    <button className="round-btn" onClick={() => onActionSelected("spock")}>
+                        <ActionIcon action={"spock"} size={20} />
+                    </button>
                 </div>
                 <div>
                     {winner !== null && <ShowWinner winner={winner} />}

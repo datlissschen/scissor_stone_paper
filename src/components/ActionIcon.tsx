@@ -1,6 +1,6 @@
 import type {Action} from "../types.ts";
 import type {IconType} from "react-icons";
-import {FaHome, FaGamepad, FaHandPaper, FaHandRock, FaHandScissors} from "react-icons/fa";
+import {FaHome, FaGamepad, FaHandPaper, FaHandRock, FaHandScissors, FaHandLizard, FaHandSpock} from "react-icons/fa";
 
 const icons: Record<Action, IconType> = {
     rock: FaHandRock,
@@ -8,6 +8,8 @@ const icons: Record<Action, IconType> = {
     scissors: FaHandScissors,
     home: FaHome,
     game: FaGamepad,
+    lizard: FaHandLizard,
+    spock: FaHandSpock
 };
 
 export function ActionIcon({ action, ...props }: { action: Action; size?: number }) {

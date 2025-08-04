@@ -1,1 +1,1 @@
-export type Action = "rock" | "paper" | "scissors" | "home" | "game";
+export type Action = "rock" | "paper" | "scissors" | "lizard" | "spock" | "home" | "game" | "extendedVersion";
