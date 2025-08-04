@@ -1,0 +1,66 @@
+.general {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
+  padding: 2rem;
+  width: 100%;
+  max-width: 600px; /* maximal width on bigger screens*/
+  box-sizing: border-box;
+}
+
+.center{
+  text-align: center;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  vertical-align: center;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  text-align: center;
+}
+
+.player{
+  margin: 0.625rem;
+  width: 7.5rem;
+  height: 7.5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--text-primary);
+}
+
+.score {
+  padding: 0.063rem;
+  font-size:small;
+  font-weight: bold;
+  background-color: var(--nav-background);
+}
+
+.action {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  color: var(--button-green);
+}
+
+.round-btn{
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 50%;
+  border: none;
+  margin: 0.065rem;
+  cursor: pointer;
+  background-color: var(--button-green);
+  color: var(--button-blue-text);
+  text-align: center;
+}
+
+.round-btn:hover{
+  background-color: var(--button-green-hover);
+}
