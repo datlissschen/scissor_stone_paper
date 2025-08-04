@@ -11,11 +11,20 @@ const actions: Record<Action, Action []>= {
     game: [],
     extendedVersion: [],
 };
-export function randomAction(): Action {
-    const keys: Action[] = ["rock", "paper", "scissors", "lizard", "spock"];
-    const index = Math.floor(Math.random() * keys.length);
-    return keys[index];
+
+function getRandomAction(actions: Action[]):Action {
+    const index = Math.floor(Math.random() * actions.length);
+    return actions[index];
 }
+export function randomAction(): Action {
+    return getRandomAction(["rock", "paper", "scissors"]);
+}
+
+export function randomActionExtended(): Action {
+    return getRandomAction(["rock", "paper", "scissors", "lizard", "spock"]);
+}
+
+
 
 export function calculateWinner(action1: Action, action2: Action):0|1|-1|null {
     //===, because we are comparing type and value

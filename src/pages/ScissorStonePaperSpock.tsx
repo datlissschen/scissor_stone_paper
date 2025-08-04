@@ -6,7 +6,7 @@ import { useState } from "react";
 import { Player } from "../components/Player.tsx";
 import { ActionButton } from "../components/ActionButton";
 import { ShowWinner } from "../components/ShowWinner.tsx";
-import { randomAction, calculateWinner } from "../utils/logic.ts";
+import { randomActionExtended, calculateWinner } from "../utils/logicSSP.ts";
 import type {Action} from "../types.ts";
 import {ActionIcon} from "../components/ActionIcon.tsx";
 
@@ -21,7 +21,7 @@ export default function ScissorStonePaperSpock() {
     const actions: Action[] = ["rock", "paper", "scissors"];
 
     const onActionSelected = (selectedAction: Action) => {
-        const newComputerAction = randomAction();
+        const newComputerAction = randomActionExtended();
 
         setPlayerAction(selectedAction);
         setComputerAction(newComputerAction);

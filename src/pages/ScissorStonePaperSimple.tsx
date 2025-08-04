@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Player } from "../components/Player.tsx";
 import { ActionButton } from "../components/ActionButton";
 import { ShowWinner } from "../components/ShowWinner.tsx";
-import { randomAction, calculateWinner } from "../utils/logic.ts";
+import { randomAction, calculateWinner } from "../utils/logicSSP.ts";
 import type {Action} from "../types.ts";
 
 // main
