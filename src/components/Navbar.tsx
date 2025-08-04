@@ -16,12 +16,7 @@ export function Navbar() {
                         <ActionIcon action="home" size={20} />
                     </Link>
                 </button>
-                <button title="SchereSteinPapierLizard und Spark Extension">
-                    <Link to="/SSPComplex">
-                        SchereSteinPapierKomplex
-                    </Link>
-                </button>
-                <button title = "SchereSteinPapier">
+                <button title = "Game options">
                     <Link to="/game">
                         <ActionIcon action="game" size={20} />
                     </Link>
