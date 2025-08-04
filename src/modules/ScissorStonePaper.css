@@ -10,11 +10,6 @@
   box-sizing: border-box;
 }
 
-h2{
-  font-size: 1.125rem;
-  color: var(--text-primary);
-}
-
 .center{
   text-align: center;
 }
@@ -25,6 +20,8 @@ h2{
   justify-content: center;
   align-items: center;
   vertical-align: center;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  text-align: center;
 }
 
 .player{
