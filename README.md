@@ -1,69 +1,75 @@
-# React + TypeScript + Vite
+# Snake Game in C (Windows Console)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight, high-performance implementation of the classic Snake game written in **C**. This version is specifically optimized for **Windows environments** using the Win32 API to ensure a flicker-free gaming experience without the need for external libraries like `ncurses`.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* **Flicker-Free Rendering**: Uses native Windows `SetConsoleCursorPosition` instead of `system("cls")` for smooth visuals.
+* **Low Resource Usage**: Minimal CPU and memory footprint.
+* **Intuitive Controls**: Classic WASD keyboard mapping.
+* **No External Dependencies**: Compiles directly with standard Windows C compilers (MinGW, MSVC).
 
-## Expanding the ESLint configuration
+## Game Mechanics
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* **Objective**: Eat the food (`*`) to grow your snake and increase your score.
+* **Growth**: Each piece of food adds 10 points to your score and increases the tail length.
+* **Game Over Conditions**:
+* Colliding with the borders (`-` and `|`).
+* Colliding with the snake's own tail (`o`).
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Controls
+
+| Key | Action |
+| --- | --- |
+| **W** | Move Up |
+| **A** | Move Left |
+| **S** | Move Down |
+| **D** | Move Right |
+| **X** | Exit Game |
+
+## Technical Implementation Details
+
+The project demonstrates several core programming concepts:
+
+* **Win32 API Integration**: Handling console handles and cursor visibility.
+* **Non-blocking Input**: Using `_kbhit()` and `_getch()` from `conio.h` for real-time responsiveness.
+* **Game Loop Architecture**: Separation of `Input`, `Logic`, and `Rendering` phases.
+* **Dynamic Coordinate Mapping**: Managing an array-based tail system for movement tracking.
+
+## Getting Started
+
+### Prerequisites
+
+* A Windows Operating System.
+* A C compiler (e.g., **MinGW** via CLion, or **MSVC** via Visual Studio).
+
+### Compilation
+
+If using a terminal (like PowerShell or CMD with MinGW), run:
+
+```bash
+gcc main.c -o SnakeGame.exe
+
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Execution
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Simply run the generated executable:
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+./SnakeGame.exe
+
 ```
+
+## Project Structure
+
+* `main.c`: Contains the entire game logic, including the setup, game loop, and rendering engine.
+* `HEIGHT` / `WIDTH`: Macros to easily adjust the playing field dimensions.
+
+---
+
+**Developed as a technical exercise in C and Windows System Programming.**
+
+Would you like me to add a section on how to extend the game (e.g., adding levels or high scores)?
