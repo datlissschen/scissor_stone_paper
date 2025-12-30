@@ -71,5 +71,3 @@ Simply run the generated executable:
 ---
 
 **Developed as a technical exercise in C and Windows System Programming.**
-
-Would you like me to add a section on how to extend the game (e.g., adding levels or high scores)?
